@@ -1,0 +1,42 @@
+{
+  "name": "cs-i18n",
+  "version": "1.0.0",
+  "description": "国际化组件",
+  "main": "build/intern.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd example && webpack-dev-server --progress --colors",
+    "dist": "rm -rf dist && npm run dist:umd && npm run dist:umd:min",
+    "dist:umd": "webpack src/intern.js dist/cs-i18n.js",
+    "dist:umd:min": "webpack src/intern.js dist/cs-i18n.min.js -p",
+    "build": "rm -rf build && babel src -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/change-soft8/cs-i18n.git"
+  },
+  "keywords": [
+    "react",
+    "i18n",
+    "intl"
+  ],
+  "author": "cs_team <change-soft@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/change-soft8/cs-i18n/issues"
+  },
+  "homepage": "https://github.com/change-soft8/cs-i18n#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-intl": "^2.1.5",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
