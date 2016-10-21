@@ -1,4 +1,4 @@
-import { addLocaleData, IntlProvider } from 'react-intl';
+import { addLocaleData, IntlProvider } from 'react-intl/dist/react-intl.min.js';
 
 export default class IntlFactory {
 

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactIntl = require('react-intl');
+var _reactIntlMin = require('react-intl/dist/react-intl.min.js');
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -22,7 +22,7 @@ var IntlFactory = function () {
             this.languages[language] = translate;
 
             //添加格式化数字、钱币等需要的配置文件
-            (0, _reactIntl.addLocaleData)(require('react-intl/locale-data/' + language));
+            (0, _reactIntlMin.addLocaleData)(require('react-intl/locale-data/' + language));
         }
 
         //获取localStorage里语言
@@ -57,7 +57,7 @@ var IntlFactory = function () {
                 var temp = {};
                 temp[param] = translate;
                 Object.assign(this.languages, temp);
-                (0, _reactIntl.addLocaleData)(require('react-intl/locale-data/' + param));
+                (0, _reactIntlMin.addLocaleData)(require('react-intl/locale-data/' + param));
                 return translate;
             }
 
@@ -105,7 +105,7 @@ var IntlFactory = function () {
                                 _this = this;
                                 //IntlProvider配置内容，格式化数字、货币、日期等，翻译文件
 
-                                return _context.abrupt('return', new _reactIntl.IntlProvider({
+                                return _context.abrupt('return', new _reactIntlMin.IntlProvider({
                                     locale: param,
                                     formats: {
                                         number: {
