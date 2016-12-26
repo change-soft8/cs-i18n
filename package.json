@@ -1,6 +1,6 @@
 {
   "name": "cs-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "国际化组件",
   "main": "build/intern.js",
   "scripts": {
@@ -33,8 +33,10 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "react-intl": "^2.1.5",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react-intl": "^2.2.0"
   }
 }
